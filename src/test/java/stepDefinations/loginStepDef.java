@@ -3,6 +3,7 @@ package stepDefinations;
 import static io.restassured.RestAssured.*;
 
 import POJOClasses.Payload;
+import UrlBuilder.APIResources;
 import Utilities.testBaseUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -29,11 +30,13 @@ public class loginStepDef extends testBaseUtility {
                 .body(body);
     }
 
-    @When("user calls {string} with POST request")
-    public void user_calls_with_POST_request(String string) {
+    @When("user calls {string} with {string} request")
+    public void user_calls_with_POST_request(String resource, String requestType) {
+        APIResources apiResource = APIResources.valueOf(resource);
+        String path = apiResource.getResource();
         resOfAddPlace = reqSpec
                 .when()
-                .post("/maps/api/place/add/json");
+                .post(path);
     }
 
     @Then("the API call is success with status code {string}")

@@ -35,4 +35,23 @@ public class testBaseUtility {
                 .setContentType(ContentType.JSON)
                 .build();
     }
+
+    /*
+    -----------------Logging can also be done in single file-----------------
+    public static RequestSpecification req;
+    public RequestSpecification reqSpecForAddPlace() throws IOException, InterruptedException {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
+        String dateTime = LocalDateTime.now().format(formatter);
+        if (req == null) {
+            PrintStream stream = new PrintStream(new FileOutputStream("logs\\logger.txt"));
+            req = new RequestSpecBuilder()
+                    .setBaseUri(getPropertiesValue("baseURL"))
+                    .addFilter(RequestLoggingFilter.logRequestTo(stream))
+                    .addFilter(ResponseLoggingFilter.logResponseTo(stream))
+                    .setContentType(ContentType.JSON)
+                    .build();
+            return req;
+        }
+        return req;
+    }*/
 }
