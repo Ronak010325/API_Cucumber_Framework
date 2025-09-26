@@ -1,0 +1,101 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "rahul",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Virar",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "Marathi"
+}
+HTTP/1.1 200 OK
+Date: Fri, 26 Sep 2025 10:51:41 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "b9ccace31e68b553e40e2e375716c6bb",
+    "scope": "APP",
+    "reference": "d5f9e274917d7ad72dfbf25b69ddce5cd5f9e274917d7ad72dfbf25b69ddce5c",
+    "id": "d5f9e274917d7ad72dfbf25b69ddce5c"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=b9ccace31e68b553e40e2e375716c6bb&key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	place_id=b9ccace31e68b553e40e2e375716c6bb
+				key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "rahul",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Virar",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "Marathi"
+}
+HTTP/1.1 200 OK
+Date: Fri, 26 Sep 2025 10:51:41 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 225
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "rahul",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Virar",
+    "types": "shoe park,shop",
+    "website": "http://google.com",
+    "language": "Marathi"
+}
