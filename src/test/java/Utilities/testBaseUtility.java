@@ -5,6 +5,8 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import java.io.*;
@@ -22,7 +24,7 @@ public class testBaseUtility {
         return prop.getProperty(key);
     }
 
-    public RequestSpecification reqSpecForAddPlace() throws IOException, InterruptedException {
+    public RequestSpecification reqSpecBuilder() throws IOException, InterruptedException {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
         String dateTime = LocalDateTime.now().format(formatter);
         PrintStream stream = new PrintStream(new FileOutputStream("logs\\logger"+dateTime+".txt"));
@@ -54,4 +56,10 @@ public class testBaseUtility {
         }
         return req;
     }*/
+
+    public String getJsonPathValue(Response res, String key) {
+        String resJSON = res.asString();
+        JsonPath js = new JsonPath(resJSON);
+        return js.get(key).toString();
+    }
 }

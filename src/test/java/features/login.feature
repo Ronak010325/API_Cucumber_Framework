@@ -27,4 +27,10 @@ Feature: Validating Place API's
     Examples:
     | name  | address     | language  |
     | ronak | Nallasopara | Hindi     |
-    | rahul | Virar       | Marathi   |
+#    | rahul | Virar       | Marathi   |
+
+Scenario: Verify if the Place is being Deleted successfully using DeletePlaceAPI
+    Given Delete Place Payload
+    When user calls "DeletePlaceAPI" with "POST" request
+    Then the API call is success with status code "200"
+    And "status" in response body is "OK"

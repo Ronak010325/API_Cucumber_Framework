@@ -4,6 +4,7 @@ import POJOClasses.Location;
 import POJOClasses.Payload;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class testDataBuild {
@@ -24,5 +25,11 @@ public class testDataBuild {
         payloadBody.setLanguage(language);
 
         return payloadBody;
+    }
+
+    public HashMap<String, String> deletePlaceData(String placeId) {
+        HashMap<String, String> body = new HashMap<>();
+        body.put("place_id", placeId);
+        return body;
     }
 }
