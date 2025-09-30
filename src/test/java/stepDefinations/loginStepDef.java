@@ -22,7 +22,7 @@ public class loginStepDef extends testBaseUtility {
     Payload body;
     testDataBuild dataBuilder = new testDataBuild();
     RequestSpecification reqSpec;
-    static String placeId;
+    static String placeId;  //As this place id is needed in different scenarios it's declared as static
 
     @Given("Add Place Payload {string} {string} {string}")
     public void Add_Place_Payload(String name, String address, String language) throws IOException, InterruptedException {
@@ -85,7 +85,7 @@ public class loginStepDef extends testBaseUtility {
                 .queryParam("place_id", placeId)
                 .queryParam("key", prop.getProperty("key"));
         user_calls_with_request(resource, "GET");
-        String Name = getJsonPathValue(response, "name");
-        Assert.assertEquals(Name, name);
+        String resName = getJsonPathValue(response, "name");
+        Assert.assertEquals(resName, name);
     }
 }

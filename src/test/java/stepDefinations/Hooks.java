@@ -1,0 +1,17 @@
+package stepDefinations;
+
+import io.cucumber.java.Before;
+
+import java.io.IOException;
+
+public class Hooks {
+    @Before("@DeletePlaceAPI")
+    public void beforeScenario() throws IOException, InterruptedException {
+        loginStepDef steps = new loginStepDef();
+        if (loginStepDef.placeId == null) {
+            steps.Add_Place_Payload("ronak", "address", "language");
+            steps.user_calls_with_request("AddPlaceAPI", "POST");
+            steps.verify_place_id_created_maps_to_the_using("ronak", "GetPlaceAPI");
+        }
+    }
+}
