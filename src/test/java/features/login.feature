@@ -16,7 +16,7 @@ Feature: Validating Place API's
 #  When user calls "DeletePlaceAPI" with POST request
 
 #Data Driven
-  @AddPlaceAPI
+  @AddPlaceAPI @Smoke @Regression
   Scenario Outline: Verify if the Place is being added successfully using AddPlaceAPI
     Given Add Place Payload "<name>" "<address>" "<language>"
     When user calls "AddPlaceAPI" with "POST" request
