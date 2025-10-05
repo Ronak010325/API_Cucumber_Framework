@@ -25,9 +25,8 @@ public class testBaseUtility {
     }
 
     public RequestSpecification reqSpecBuilder() throws IOException, InterruptedException {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
-        String dateTime = LocalDateTime.now().format(formatter);
-        PrintStream stream = new PrintStream(new FileOutputStream("logs\\logger"+dateTime+".txt"));
+        getTimeDate time = new getTimeDate();
+        PrintStream stream = new PrintStream(new FileOutputStream("logs\\logger"+time.getDatetime()+".txt"));
         Thread.sleep(1000);
 
         return new RequestSpecBuilder()
