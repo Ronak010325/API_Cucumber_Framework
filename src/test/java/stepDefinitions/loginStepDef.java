@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinitions;
 
 import static io.restassured.RestAssured.*;
 
@@ -20,9 +20,13 @@ import java.util.HashMap;
 public class loginStepDef extends testBaseUtility {
     Response response;
     Payload body;
+    HashMap libraryBody;
     testDataBuild dataBuilder = new testDataBuild();
     RequestSpecification reqSpec;
     static String placeId;  //As this place id is needed in different scenarios it's declared as static
+
+    public loginStepDef() throws IOException {
+    }
 
     @Given("Add Place Payload {string} {string} {string}")
     public void Add_Place_Payload(String name, String address, String language) throws IOException, InterruptedException {
@@ -38,6 +42,15 @@ public class loginStepDef extends testBaseUtility {
         reqSpec = given()
                 .spec(reqSpecBuilder())
                 .body(body);
+    }
+
+    @Given("Add Book Payload Using {string} and {string}")
+    public void add_book_payload_using_and(String sheetName, String rowNum) throws IOException, InterruptedException {
+        int row = Integer.parseInt(rowNum);
+        libraryBody = dataBuilder.getBookData(sheetName, row);
+        reqSpec = given()
+                .spec(reqSpecBuilder())
+                .body(libraryBody);
     }
 
     @When("user calls {string} with {string} request")

@@ -56,6 +56,7 @@ public class testBaseUtility {
         return req;
     }*/
 
+//    This is to be used only when there is small json in response
     public String getJsonPathValue(Response res, String key) {
         String resJSON = res.asString();
         JsonPath js = new JsonPath(resJSON);
