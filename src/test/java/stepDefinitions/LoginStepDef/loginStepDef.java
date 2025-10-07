@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.LoginStepDef;
 
 import static io.restassured.RestAssured.*;
 
@@ -23,7 +23,7 @@ public class loginStepDef extends testBaseUtility {
     HashMap libraryBody;
     testDataBuild dataBuilder = new testDataBuild();
     RequestSpecification reqSpec;
-    static String placeId;  //As this place id is needed in different scenarios it's declared as static
+    public static String placeId;  //As this place id is needed in different scenarios it's declared as static
 
     public loginStepDef() throws IOException {
     }
@@ -38,7 +38,7 @@ public class loginStepDef extends testBaseUtility {
 
     @Given("Delete Place Payload")
     public void delete_place_payload() throws IOException, InterruptedException {
-        HashMap<String, String> body = dataBuilder.deletePlaceData(placeId);
+        String body = dataBuilder.deletePlaceData(placeId);
         reqSpec = given()
                 .spec(reqSpecBuilder())
                 .body(body);

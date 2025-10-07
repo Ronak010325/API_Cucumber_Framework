@@ -7,6 +7,7 @@ public enum APIResources {
     GetPlaceAPI("/maps/api/place/get/json"),
     DeletePlaceAPI("/maps/api/place/delete/json"),
     AddBookAPI("/Library/Addbook.php"),
+    GetBookAPI("/Library/GetBook.php"),
     DeleteBookAPI("/Library/DeleteBook.php");
 
     private String resource;

@@ -39,28 +39,39 @@ public class testDataBuild extends testBaseUtility {
         return payloadBody;
     }
 
-    public HashMap<String, String> deletePlaceData(String placeId) {
-        HashMap<String, String> body = new HashMap<>();
-        body.put("place_id", placeId);
-        return body;
+    public String deletePlaceData(String placeId) {
+        return "{ " +
+                "\"place_id\":\""+placeId+"\"" +
+                "}";
     }
 
     public HashMap getBookData(String SheetName, int rowNum) throws IOException {
         excel = new ExcelUtilities(path, SheetName);
         int cellCount = excel.getCellCount(rowNum);
         HashMap<String, String> output = new HashMap<String, String>();
-        for (int i = 0 ; i <= cellCount ; i++) {
+        for (int i = 0 ; i < cellCount ; i++) {
             output.put(excel.getCellValue(0, i), excel.getCellValue(rowNum, i));
         }
         return output;
     }
 
-//    public String deleteBookData(String SheetName, int rowNum) throws IOException {
-//        excel = new ExcelUtilities(path, SheetName);
-//        String isbn = excel.getCellValue(rowNum, 1);
-//        String aisle = excel.getCellValue(rowNum, 2);
-//        return "{ " +
-//                "\"ID\":\""+(isbn+aisle)+"\"" +
-//                "}";
-//    }
+    public String deleteBookData(String SheetName, int rowNum) throws IOException {
+        excel = new ExcelUtilities(path, SheetName);
+        String bookId = excel.getCellValue(rowNum, 0);
+        return "{ " +
+                "\"ID\":\""+bookId+"\"" +
+                "}";
+    }
+
+    public String getBookId(String sheetName, int rowNum) throws IOException {
+        excel = new ExcelUtilities(path, sheetName);
+        String isbn = excel.getCellValue(rowNum, 1);
+        String aisle = excel.getCellValue(rowNum, 2);
+        return isbn+aisle;
+    }
+
+    public String getAuthorName(String sheetName, int rowNum) throws IOException {
+        excel = new ExcelUtilities(path, sheetName);
+        return excel.getCellValue(rowNum, 3);
+    }
 }
