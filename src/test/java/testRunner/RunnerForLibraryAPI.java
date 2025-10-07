@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
         glue = {"stepDefinitions.LibraryAPI"},            // package name of your step def
         plugin = {
                 "pretty",
-                "html:Reports/htmlReports/cucumber-report.html",
-                "json:Reports/jsonReports/cucumber.json",
+                "html:target/cucumber-report.html",
+                "json:target/cucumber.json",
                 "rerun:target/failed_scenarios.txt"     //write the file path of which scenario failed to execute
         },
         tags = "@Master"

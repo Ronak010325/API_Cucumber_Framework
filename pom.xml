@@ -136,7 +136,7 @@
                     <version>3.5.3</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                            <suiteXmlFile>libraryAPI.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
@@ -182,7 +182,7 @@
 <!--                    <artifactId>maven-surefire-plugin</artifactId>-->
 <!--                    <configuration>-->
 <!--                        <suiteXmlFiles>-->
-<!--                            <suiteXmlFile>testng.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile>placeAPI.xml</suiteXmlFile>-->
 <!--                        </suiteXmlFiles>-->
 <!--                    </configuration>-->
 <!--                </plugin>-->

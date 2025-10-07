@@ -1,0 +1,32 @@
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/Library/GetBook.php?ID=abc1245
+Proxy:			<none>
+Request params:	<none>
+Query params:	ID=abc1245
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 07 Oct 2025 12:10:35 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 92
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+[
+    {
+        "book_name": "The Silent Patient",
+        "isbn": "abc",
+        "aisle": "1245",
+        "author": "Alex Michaelides"
+    }
+]

@@ -12,6 +12,8 @@ import io.restassured.specification.RequestSpecification;
 import java.io.*;
 import java.util.Properties;
 
+import static Utilities.getTimeDate.getDatetime;
+
 public class testBaseUtility {
     public Properties prop;
 
@@ -23,10 +25,9 @@ public class testBaseUtility {
     }
 
     public RequestSpecification reqSpecBuilder() throws IOException, InterruptedException {
-        getTimeDate time = new getTimeDate();
         File folder = new File("logs/"+getPropertiesValue("loggerFileName"));
         folder.mkdirs();
-        PrintStream stream = new PrintStream(new FileOutputStream("logs\\"+getPropertiesValue("loggerFileName")+"\\logger"+time.getDatetime()+".txt"));
+        PrintStream stream = new PrintStream(new FileOutputStream("logs\\"+getPropertiesValue("loggerFileName")+"\\logger"+getDatetime()+".txt"));
         Thread.sleep(1000);
 
         return new RequestSpecBuilder()

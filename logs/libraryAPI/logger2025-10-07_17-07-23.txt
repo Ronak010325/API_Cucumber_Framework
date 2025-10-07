@@ -1,0 +1,181 @@
+Request method:	GET
+Request URI:	http://216.10.245.166/Library/GetBook.php?AuthorName=James%20Clear
+Proxy:			<none>
+Request params:	<none>
+Query params:	AuthorName=James Clear
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 07 Oct 2025 11:37:23 GMT
+Server: Apache
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: application/json;charset=UTF-8
+
+[
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "AHJC",
+        "aisle": "1295"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "AHJC",
+        "aisle": "4595"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "AHJC",
+        "aisle": "48995"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "AHJC",
+        "aisle": "540122"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "AHJC",
+        "aisle": "788756"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "atmhbt",
+        "aisle": "2000"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "atmttd",
+        "aisle": "22776"
+    },
+    {
+        "book_name": "",
+        "isbn": "RCR448",
+        "aisle": "228"
+    },
+    {
+        "book_name": "atomic habits",
+        "isbn": "RCR146",
+        "aisle": "228"
+    },
+    {
+        "book_name": "atomic habits",
+        "isbn": "RCR957",
+        "aisle": "228"
+    },
+    {
+        "book_name": "atomic habits",
+        "isbn": "RCR365",
+        "aisle": "228"
+    },
+    {
+        "book_name": "Hábitos atômicos",
+        "isbn": "RS857",
+        "aisle": "9"
+    },
+    {
+        "book_name": "Hábitos atômicos",
+        "isbn": "RS272",
+        "aisle": "9"
+    },
+    {
+        "book_name": "Hábitos atômicos",
+        "isbn": "RS849",
+        "aisle": "9"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "ndnd",
+        "aisle": "44554"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "ndnd",
+        "aisle": "7114"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "hdshd",
+        "aisle": "7822"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "hdhhd",
+        "aisle": "7894"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "sdhhd",
+        "aisle": "7844"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "ldjdj",
+        "aisle": "7854"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "bndndn",
+        "aisle": "4448"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "ndnnd",
+        "aisle": "8885"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "jdjdas",
+        "aisle": "74854"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "uwuwj",
+        "aisle": "7513"
+    },
+    {
+        "book_name": "Atomic Habit",
+        "isbn": "jsjnx",
+        "aisle": "7845"
+    },
+    {
+        "book_name": "The Atomic Habits",
+        "isbn": "xrz",
+        "aisle": "1234"
+    },
+    {
+        "book_name": "The Atomic Habits",
+        "isbn": "xrz17",
+        "aisle": "1234"
+    },
+    {
+        "book_name": "The Atomic Habits",
+        "isbn": "xrz18",
+        "aisle": "1234"
+    },
+    {
+        "book_name": "The Atomic Habits",
+        "isbn": "xrz19",
+        "aisle": "1234"
+    },
+    {
+        "book_name": "The Atomic Habits",
+        "isbn": "xrz20",
+        "aisle": "1234"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "isbn": "def",
+        "aisle": "2378"
+    }
+]
