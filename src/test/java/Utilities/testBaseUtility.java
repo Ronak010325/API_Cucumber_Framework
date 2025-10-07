@@ -10,8 +10,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import java.io.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 public class testBaseUtility {
@@ -26,7 +24,9 @@ public class testBaseUtility {
 
     public RequestSpecification reqSpecBuilder() throws IOException, InterruptedException {
         getTimeDate time = new getTimeDate();
-        PrintStream stream = new PrintStream(new FileOutputStream("logs\\logger"+time.getDatetime()+".txt"));
+        File folder = new File("logs/"+getPropertiesValue("loggerFileName"));
+        folder.mkdirs();
+        PrintStream stream = new PrintStream(new FileOutputStream("logs\\"+getPropertiesValue("loggerFileName")+"\\logger"+time.getDatetime()+".txt"));
         Thread.sleep(1000);
 
         return new RequestSpecBuilder()

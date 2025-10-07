@@ -4,10 +4,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "src/test/java/features",   // path to your .feature files.
+        features = "src/test/java/features/login.feature",   // path to your .feature files.
                                                // You Can Also give the exact path to the feature file like
                                                // src/test/java/features/login.feature
-        glue = {"stepDefinitions"},            // package name of your step def
+        glue = {"stepDefinitions.LoginStepDef"},            // package name of your step def
         plugin = {
                 "pretty",
                 "html:Reports/htmlReports/cucumber-report.html",

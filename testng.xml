@@ -3,8 +3,8 @@
 <suite name="Suite">
     <test name="Test">
         <classes>
-<!--            <class name="testRunner.myTestRunner" />-->
-            <class name="testRunner.RunnerForLibraryAPI"/>
+            <class name="testRunner.myTestRunner" />
+<!--            <class name="testRunner.RunnerForLibraryAPI"/>-->
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
