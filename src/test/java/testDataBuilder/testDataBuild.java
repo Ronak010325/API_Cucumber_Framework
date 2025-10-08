@@ -74,4 +74,16 @@ public class testDataBuild extends testBaseUtility {
         excel = new ExcelUtilities(path, sheetName);
         return excel.getCellValue(rowNum, 3);
     }
+
+    public String getAmplifyBody() {
+        return "{\n" +
+                "    \"messages\": [\n" +
+                "        {\n" +
+                "            \"role\": \"user\", \n" +
+                "            \"content\": \"What are the three primary colours?\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"model_id\":\"8cac310c-065b-4866-827d-cdac270f7fb7\"\n" +
+                "}";
+    }
 }

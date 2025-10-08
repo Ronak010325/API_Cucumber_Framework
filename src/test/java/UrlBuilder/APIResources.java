@@ -8,7 +8,8 @@ public enum APIResources {
     DeletePlaceAPI("/maps/api/place/delete/json"),
     AddBookAPI("/Library/Addbook.php"),
     GetBookAPI("/Library/GetBook.php"),
-    DeleteBookAPI("/Library/DeleteBook.php");
+    DeleteBookAPI("/Library/DeleteBook.php"),
+    FirstPrompt("/external/api/completion");
 
     private String resource;
 

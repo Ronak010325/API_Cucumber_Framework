@@ -1,0 +1,49 @@
+Request method:	POST
+Request URI:	https://amplify.planittesting.com/external/api/completion
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		token=f4058231-5a28-486c-9584-1710881476cb
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "messages": [
+        {
+            "role": "user",
+            "content": {
+                "type": "text",
+                "text": "Hello Amplify"
+            }
+        }
+    ]
+}
+HTTP/1.1 500 Internal Server Error
+Date: Wed, 08 Oct 2025 06:00:04 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 265
+Connection: keep-alive
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-ms-middleware-request-id: 6a58c6d0-0ee3-486b-8f35-430597d4a850
+X-Request-ID: ba722ddf
+x-azure-ref: 20251008T060003Z-17b987ff7f7tgsxvhC1BOMfhcc000000051000000000c1fh
+Content-Security-Policy: default-src 'self' blob: data: https://*.azure.com:* https://*.windows.net:* https://*.microsoft.com:* https://*.launchdarkly.com:* https://*.gstatic.com https://*.amplify.planittesting.com:* https://*.amplify.planit.com:* https://*.gstatic.com/;script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://*.windows.net:*;style-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://*.windows.net:*;font-src 'self' data: https://fonts.gstatic.com/s/ https://fonts.googleapis.com/s/ https://*.windows.net:*;img-src 'self' blob: data: https: about:;frame-src 'self' data: https: blob:;
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(self), microphone=(), camera=()
+X-Cache: CONFIG_NOCACHE
+
+<html lang="en">
+  <head>
+    <title>500 Internal Server Error</title>
+  </head>
+  <body>
+    <h1>Internal Server Error</h1>
+    <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  </body>
+</html>
