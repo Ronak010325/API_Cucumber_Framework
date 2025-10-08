@@ -10,6 +10,9 @@ import java.util.Date;
 
 public class ReportManager extends testBaseUtility {
 
+    public ReportManager() throws IOException {
+    }
+
     @AfterSuite
     public void moveReportsWithTimestamp() {
         try {
