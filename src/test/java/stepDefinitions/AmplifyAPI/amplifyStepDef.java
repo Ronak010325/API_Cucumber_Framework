@@ -1,5 +1,7 @@
 package stepDefinitions.AmplifyAPI;
 
+import POJOClasses.Amplify.AmplifyBodyPayload;
+import POJOClasses.Amplify.AmplifyPayload;
 import UrlBuilder.APIResources;
 import Utilities.testBaseUtility;
 import io.cucumber.java.en.Given;
@@ -25,7 +27,7 @@ public class amplifyStepDef extends testBaseUtility {
     @Given("Prepare request for first prompt")
     public void prepare_request_for_first_prompt() throws IOException, InterruptedException {
         String apiToken = getPropertiesValue("api_token");
-        String body = dataBuilder.getAmplifyBody();
+        AmplifyBodyPayload body = dataBuilder.getAmplifyBody();
         reqSpec = given()
                 .spec(reqSpecBuilder())
                 .header("token",apiToken)
@@ -60,6 +62,8 @@ public class amplifyStepDef extends testBaseUtility {
 
     @Then("the API call is success with status code {string}")
     public void the_api_call_is_success_with_status_code(String string) {
+        AmplifyPayload responseData = response.as(AmplifyPayload.class);
+        System.out.println(responseData.getAssistant_resp());
         Assert.assertEquals(response.getStatusCode(), Integer.parseInt(string));
     }
 }

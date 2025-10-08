@@ -1,12 +1,14 @@
 package testDataBuilder;
 
+import POJOClasses.Amplify.AmplifyBodyPayload;
 import POJOClasses.Location;
+import POJOClasses.Amplify.Messages;
 import POJOClasses.Payload;
 import Utilities.ExcelUtilities;
 import Utilities.testBaseUtility;
-import com.mongodb.util.JSON;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -75,15 +77,28 @@ public class testDataBuild extends testBaseUtility {
         return excel.getCellValue(rowNum, 3);
     }
 
-    public String getAmplifyBody() {
-        return "{\n" +
-                "    \"messages\": [\n" +
-                "        {\n" +
-                "            \"role\": \"user\", \n" +
-                "            \"content\": \"What are the three primary colours?\"\n" +
-                "        }\n" +
-                "    ],\n" +
-                "    \"model_id\":\"8cac310c-065b-4866-827d-cdac270f7fb7\"\n" +
-                "}";
+    public AmplifyBodyPayload getAmplifyBody() throws IOException {
+        AmplifyBodyPayload body = new AmplifyBodyPayload();
+
+        Messages mes1 = new Messages();
+        mes1.setRole("user");   //Role
+        mes1.setContent("List of 10 animals."); //Prompt
+
+        List<Messages> listOfMessage = new ArrayList<>();
+        listOfMessage.add(mes1);
+
+        body.setMessages(listOfMessage);
+        body.setModel_id(getPropertiesValue("model_id"));
+
+//        return "{\n" +
+//                "    \"messages\": [\n" +
+//                "        {\n" +
+//                "            \"role\": \"user\", \n" +
+//                "            \"content\": \"Name an Animal.\"\n" +
+//                "        }\n" +
+//                "    ],\n" +
+//                "    \"model_id\":\"8cac310c-065b-4866-827d-cdac270f7fb7\"\n" +
+//                "}";
+        return body;
     }
 }
