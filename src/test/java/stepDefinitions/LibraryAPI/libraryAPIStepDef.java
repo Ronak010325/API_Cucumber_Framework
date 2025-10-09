@@ -18,10 +18,8 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.given;
 
 public class libraryAPIStepDef extends testBaseUtility {
-    Response response;
     HashMap libraryBody;
     testDataBuild dataBuilder = new testDataBuild();
-    RequestSpecification reqSpec;
 
     public libraryAPIStepDef() throws IOException {
     }

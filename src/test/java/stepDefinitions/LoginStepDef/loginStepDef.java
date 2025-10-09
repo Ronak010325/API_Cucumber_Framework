@@ -18,11 +18,8 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class loginStepDef extends testBaseUtility {
-    Response response;
     Payload body;
-    HashMap libraryBody;
     testDataBuild dataBuilder = new testDataBuild();
-    RequestSpecification reqSpec;
     public static String placeId;  //As this place id is needed in different scenarios it's declared as static
 
     public loginStepDef() throws IOException {
@@ -42,15 +39,6 @@ public class loginStepDef extends testBaseUtility {
         reqSpec = given()
                 .spec(reqSpecBuilder())
                 .body(body);
-    }
-
-    @Given("Add Book Payload Using {string} and {string}")
-    public void add_book_payload_using_and(String sheetName, String rowNum) throws IOException, InterruptedException {
-        int row = Integer.parseInt(rowNum);
-        libraryBody = dataBuilder.getBookData(sheetName, row);
-        reqSpec = given()
-                .spec(reqSpecBuilder())
-                .body(libraryBody);
     }
 
     @When("user calls {string} with {string} request")

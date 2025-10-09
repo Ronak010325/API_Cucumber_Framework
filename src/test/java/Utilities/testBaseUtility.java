@@ -16,6 +16,8 @@ import static Utilities.getTimeDate.getDatetime;
 
 public class testBaseUtility {
     public Properties prop;
+    public static Response response;
+    public static RequestSpecification reqSpec;
 
     public String getPropertiesValue(String key) throws IOException {
         prop = new Properties();

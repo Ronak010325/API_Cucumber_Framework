@@ -7,8 +7,6 @@ import Utilities.testBaseUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import testDataBuilder.testDataBuild;
 
@@ -17,9 +15,7 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 public class amplifyStepDef extends testBaseUtility {
-    Response response;
     testDataBuild dataBuilder = new testDataBuild();
-    RequestSpecification reqSpec;
 
     public amplifyStepDef() throws IOException {
     }
