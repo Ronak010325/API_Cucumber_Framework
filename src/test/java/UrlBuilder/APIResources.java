@@ -9,7 +9,12 @@ public enum APIResources {
     AddBookAPI("/Library/Addbook.php"),
     GetBookAPI("/Library/GetBook.php"),
     DeleteBookAPI("/Library/DeleteBook.php"),
-    FirstPrompt("/external/api/completion");
+    FirstPrompt("/external/api/completion"),
+    GetEmployeesDetailsAPI("/employees"),
+    GetEmployeeDetailsAPI("/employee/{id}"),
+    AddEmployeeDetailsAPI("/create"),
+    UpdateEmployeeDetailsAPI("/update/{id}"),
+    DeleteEmployeeDetailsAPI("/delete/{id}");
 
     private String resource;
 

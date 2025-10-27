@@ -1,0 +1,12 @@
+Request method:	GET
+Request URI:	https://dummy.restapiexample.com/api/v1/employee
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=1
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>

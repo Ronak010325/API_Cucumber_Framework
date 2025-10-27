@@ -1,0 +1,41 @@
+Request method:	POST
+Request URI:	https://dummy.restapiexample.com/api/v1/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "demo",
+    "salary": "1234",
+    "age": "20"
+}
+HTTP/1.1 200 OK
+Date: Mon, 27 Oct 2025 04:23:06 GMT
+Server: Apache
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 58
+Upgrade: h2,h2c
+Connection: Upgrade, Keep-Alive
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 125
+Keep-Alive: timeout=5, max=75
+Content-Type: application/json
+
+{
+    "status": "success",
+    "data": {
+        "name": "demo",
+        "salary": "1234",
+        "age": "20",
+        "id": 9709
+    },
+    "message": "Successfully! Record has been added."
+}

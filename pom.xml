@@ -136,7 +136,7 @@
                     <version>3.5.3</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>amplifyAPI.xml</suiteXmlFile>
+                            <suiteXmlFile>employeeAPI.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>

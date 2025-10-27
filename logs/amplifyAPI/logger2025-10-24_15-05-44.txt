@@ -1,0 +1,27 @@
+Request method:	GET
+Request URI:	https://amplify.planittesting.com/employees
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Date: Fri, 24 Oct 2025 09:35:49 GMT
+Content-Length: 0
+Connection: keep-alive
+WWW-Authenticate: Bearer realm="amplify.planittesting.com" authorization_uri="https://login.windows.net/28a46334-feff-4136-a6be-b86bfdf0b303/oauth2/v2.0/authorize" resource_id="27a35605-eb3c-4c1d-ba39-de779bddb889"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-ms-middleware-request-id: d3d75c70-492c-42c4-acb5-1ac7ac8dc5b9
+x-azure-ref: 20251024T093548Z-17b565f7847fv7fghC1BOMptmg00000002sg0000000036gr
+Content-Security-Policy: default-src 'self' blob: data: https://*.azure.com:* https://*.windows.net:* https://*.microsoft.com:* https://*.launchdarkly.com:* https://*.gstatic.com https://*.amplify.planittesting.com:* https://*.amplify.planit.com:* https://*.gstatic.com/;script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com;style-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com;font-src 'self' data: https://fonts.gstatic.com/s/ https://fonts.googleapis.com/s/;img-src 'self' blob: data: https: about:;frame-src 'self' data: https: blob:;
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(self), microphone=(), camera=()
+Cache-Control: no-cache
+X-Cache: CONFIG_NOCACHE
