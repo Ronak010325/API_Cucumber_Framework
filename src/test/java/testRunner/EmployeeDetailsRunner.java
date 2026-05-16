@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 // and means scenario that have both tags
 // or means all scenario that have these tags
 //        tags = "@CreateEmployeeDetails or @UpdateEmployeeDetails"
-        tags = "@DeleteEmployeeDetails"
+        tags = "@GetAllEmployee"
 )
 
 public class EmployeeDetailsRunner extends AbstractTestNGCucumberTests {

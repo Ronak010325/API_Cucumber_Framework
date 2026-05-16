@@ -1,0 +1,43 @@
+Request method:	POST
+Request URI:	https://amplify.planittesting.com/external/api/completion
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		token=fb85a6fe-cbfc-4cc2-ae7c-5bdd1155d1d1
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "messages": [
+        {
+            "role": "user",
+            "content": "List of 10 animals."
+        }
+    ],
+    "model_id": "8cac310c-065b-4866-827d-cdac270f7fb7"
+}
+HTTP/1.1 200 OK
+Date: Fri, 20 Feb 2026 06:38:01 GMT
+Content-Type: application/json
+Content-Length: 173
+Connection: keep-alive
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-ms-middleware-request-id: a2293d1a-8216-451d-a4eb-7a67ccc319d2
+X-Request-ID: 32a9fda7
+x-azure-ref: 20260220T063758Z-169ccc4d889lctbrhC1BOM9dm80000000x80000000000bst
+Content-Security-Policy: default-src 'self' blob: data: https://*.azure.com:* https://*.windows.net:* https://*.microsoft.com:* https://*.launchdarkly.com:* https://*.gstatic.com https://*.amplify.planittesting.com:* https://*.amplify.planit.com:* https://*.gstatic.com/;script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com;style-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com;font-src 'self' data: https://fonts.gstatic.com/s/ https://fonts.googleapis.com/s/;img-src 'self' blob: data: https: about:;frame-src 'self' data: https: blob:;
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(self), microphone=(), camera=()
+Cache-Control: no-cache
+X-Cache: CONFIG_NOCACHE
+Accept-Ranges: bytes
+
+{
+    "assistant_resp": "Sure! Here's a list of 10 animals:\n\n1. Elephant\n2. Tiger\n3. Dolphin\n4. Kangaroo\n5. Penguin\n6. Giraffe\n7. Panda\n8. Eagle\n9. Koala\n10. Cheetah"
+}
